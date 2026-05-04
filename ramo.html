@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuentra mi amor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="letter-page game-page">
+  <canvas id="sparkleCanvas" aria-hidden="true"></canvas>
+
+  <button class="game-start" id="gameStart" type="button">
+    <span>Toca aqui</span>
+  </button>
+
+  <main class="game-shell" id="heartGame">
+    <section class="game-board" aria-labelledby="gameTitle">
+      <div class="game-topbar">
+        <div>
+          <p class="eyebrow">Mini juego</p>
+          <h1 id="gameTitle">Encuentra los corazones</h1>
+        </div>
+        <div class="game-counter" id="heartCounter">0 / 8</div>
+      </div>
+
+      <p class="game-note">Toca todos los corazones escondidos para desbloquear la sorpresa final.</p>
+
+      <div class="heart-field" id="heartField" aria-label="Corazones escondidos">
+        <span class="cloud cloud-one"></span>
+        <span class="cloud cloud-two"></span>
+        <span class="moon"></span>
+
+        <button class="hidden-heart heart-one" type="button" data-message="Te amo por hacer mis dias mas bonitos."></button>
+        <button class="hidden-heart heart-two" type="button" data-message="Me encantas mas de lo que se explicar."></button>
+        <button class="hidden-heart heart-three" type="button" data-message="Contigo todo se siente mas especial."></button>
+        <button class="hidden-heart heart-four" type="button" data-message="Eres mi pensamiento favorito."></button>
+        <button class="hidden-heart heart-five" type="button" data-message="Gracias por este primer mes tan lindo."></button>
+        <button class="hidden-heart heart-six" type="button" data-message="Quiero seguir construyendo algo bonito contigo."></button>
+        <button class="hidden-heart heart-seven" type="button" data-message="Tu forma de ser me hace muy feliz."></button>
+        <button class="hidden-heart heart-eight" type="button" data-message="Mi corazon sonrie cuando pienso en ti."></button>
+
+        <div class="found-message" id="foundMessage" aria-live="polite">Busca el primer corazon.</div>
+      </div>
+    </section>
+
+    <section class="love-rain-panel" id="loveRainPanel" aria-live="polite">
+      <section class="month-screen" aria-labelledby="monthTitle">
+        <p class="eyebrow">Sorpresa desbloqueada</p>
+        <h2 id="monthTitle">Nuestro primer mes</h2>
+        <p class="month-date">03 / 04 / 26</p>
+        <p>
+          Encontraste todos los pedacitos de mi corazon. Ojala esta lluvia de amor
+          te recuerde que te amo muchisimo y que este primer mes contigo significa
+          algo muy especial para mi.
+        </p>
+      </section>
+
+      <section class="playlist-card music-player" aria-labelledby="playlistTitle">
+        <p class="eyebrow">Playlist favorita</p>
+        <h3 id="playlistTitle">Canciones para nosotros</h3>
+
+        <div class="player-grid">
+          <div class="album-wrap">
+            <img id="songCover" src="assets/covers/portada-1.jpg" alt="Portada de la cancion">
+          </div>
+
+          <div class="player-main">
+            <p class="song-title" id="songTitle">Nuestra cancion</p>
+            <p class="song-artist" id="songArtist">Artista</p>
+            <div class="equalizer" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="player-progress" id="progressTrack" aria-label="Progreso de la cancion">
+              <span id="progressBar"></span>
+            </div>
+            <div class="time-row">
+              <span id="currentTime">0:00</span>
+              <span id="durationTime">0:00</span>
+            </div>
+
+            <div class="player-controls">
+              <button id="prevSong" type="button" aria-label="Cancion anterior">‹</button>
+              <button class="play-button" id="playSong" type="button" aria-label="Pausar o reproducir">▶</button>
+              <button id="nextSong" type="button" aria-label="Siguiente cancion">›</button>
+            </div>
+            <audio id="audioPlayer" preload="metadata"></audio>
+          </div>
+        </div>
+
+        <div class="playlist-bottom">
+          <div class="song-list" id="songList" aria-label="Lista de canciones"></div>
+          <div class="lyrics-box">
+            <p class="eyebrow">Dedicatoria</p>
+            <div class="song-story" id="songStory"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-letter-lock">
+        <button id="unlockFinalLetter" type="button">Leer carta final</button>
+      </section>
+
+      <section class="final-letter" id="finalLetter" aria-live="polite">
+        <p class="eyebrow">Carta final</p>
+        <h3>Para ti, mi amor</h3>
+        <p>
+          Si llegaste hasta aqui, quiero que sepas algo: este primer mes contigo
+          me hizo muy feliz. Me encanta poder quererte, pensarte, esperarte y
+          sentir que poco a poco vamos haciendo algo nuestro.
+        </p>
+        <p>
+          Gracias por ser tu, por elegirme y por hacer que hasta los dias normales
+          tengan algo especial. Te amo muchisimo, y ojala este sea solo el inicio
+          de muchos meses mas juntos.
+        </p>
+        <a class="surprise-link" href="carta.html">Volver a la carta</a>
+      </section>
+    </section>
+  </main>
+
+  <script src="playlist.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

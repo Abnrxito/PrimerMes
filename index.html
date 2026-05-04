@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro primer mes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="lock-page">
+  <canvas id="sparkleCanvas" aria-hidden="true"></canvas>
+
+  <main class="lock-shell">
+    <section class="lock-card" aria-labelledby="lockTitle">
+      <p class="eyebrow">Una sorpresa chiquita para ti</p>
+      <h1 id="lockTitle">Nuestro primer mes juntos</h1>
+      <p class="intro">
+        Hay una fecha que abrió una parte muy bonita de mi vida. Si la recuerdas,
+        esta carta es para ti.
+      </p>
+
+      <form class="pin-form" id="pinForm" autocomplete="off">
+        <label for="pinInput">Código secreto</label>
+        <div class="pin-row">
+          <input
+            id="pinInput"
+            name="pin"
+            inputmode="numeric"
+            maxlength="6"
+            placeholder="______"
+            aria-describedby="hintText errorText"
+            required
+          >
+          <button type="submit">Entrar</button>
+        </div>
+        <p class="hint" id="hintText">Pista: el día en que oficialmente empezamos a ser tú y yo.</p>
+        <p class="error" id="errorText" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
